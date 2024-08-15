@@ -34,8 +34,8 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
             row.innerHTML = `  
                 <div>${data[item[1]].market_cap_rank}</div>  
                 <div>${data[item[1]].id}</div>  
-                <div>${data[item[1]].current_price.toLocaleString()}</div>  
-                <div>${data[item[1]].market_cap.toLocaleString()}</div>  
+                <div>$${data[item[1]].current_price.toLocaleString()}</div>  
+                <div>$${data[item[1]].market_cap.toLocaleString()}</div>  
                 <div class="${changeColor}">${marketCapChange}%</div> 
             `;  
           
