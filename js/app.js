@@ -26,17 +26,17 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
         cryptoContainer.innerHTML = ''
         clonArr.forEach((item) => {  
             let row = document.createElement('div');  
-            row.className = "grid grid-cols-5 text-center p-4 border-b border-gray-300 hover:bg-gray-50";  
+            row.className = "grid grid-cols-2 lg:grid-cols-5 text-center p-4 border-b border-gray-300 hover:bg-gray-50";  
         
             const marketCapChange = data[item[1]].market_cap_change_percentage_24h;  
             const changeColor = marketCapChange < 0 ? 'text-red-600' : 'text-green-600';  
         
             row.innerHTML = `  
-                <div>${data[item[1]].market_cap_rank}</div>  
+                <div class="font-bold hidden lg:grid">${data[item[1]].market_cap_rank}</div>  
                 <div>${data[item[1]].id}</div>  
                 <div>$${data[item[1]].current_price.toLocaleString()}</div>  
-                <div>$${data[item[1]].market_cap.toLocaleString()}</div>  
-                <div class="${changeColor}">${marketCapChange}%</div> 
+                <div class="font-bold hidden lg:grid">$${data[item[1]].market_cap.toLocaleString()}</div>  
+                <div class="${changeColor} font-bold hidden lg:grid">${marketCapChange}%</div> 
             `;  
           
             document.getElementById('crypto').appendChild(row);  
