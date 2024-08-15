@@ -1,7 +1,7 @@
 ﻿# crypto-price
 You can see information about my project
 
-![viewfinal](https://imgurl.ir/uploads/v326906_Screenshot_4.png)
+![viewfinal](https://imgurl.ir/uploads/b06112_Screenshot_7.png)
 
 - [Demo Project](https://mohammadjodaki.github.io/crypto-price/)
 
